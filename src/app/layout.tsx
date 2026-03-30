@@ -43,6 +43,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <footer className="border-t border-gray-200 py-4 text-center text-xs text-gray-400">
+          <div className="flex flex-wrap justify-center gap-4 mb-2">
+            <a href="/privacy-policy" className="text-blue-600 hover:text-blue-800">
+              Privacy Policy
+            </a>
+            <a href="/terms" className="text-blue-600 hover:text-blue-800">
+              Terms of Service
+            </a>
+          </div>
           <p>Estimates only. Not legal or financial advice. Actual duties may vary.</p>
           <p className="mt-1">&copy; 2026 TariffCalc</p>
         </footer>
