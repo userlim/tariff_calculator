@@ -3,12 +3,12 @@ import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'US Tariff Calculator 2026 ??Free Import Duty & Tax Estimator',
+  title: 'US Tariff Calculator 2026 - Free Import Duty & Tax Estimator',
   description: 'Calculate US import tariffs and duties for 2026. Covers Trump tariffs, Section 301, Section 232, and reciprocal tariffs by country. Free, instant, no signup.',
   keywords: ['tariff calculator', 'import duty calculator', 'Trump tariff calculator 2026', 'US customs duty', 'trade war calculator', 'tariff by country', 'import tax calculator'],
   metadataBase: new URL('https://tariff-calculator-app.vercel.app'),
   openGraph: {
-    title: 'US Tariff Calculator 2026 ??Free Import Duty Estimator',
+    title: 'US Tariff Calculator 2026 - Free Import Duty Estimator',
     description: 'Calculate how much tariffs add to your imports. Updated for 2026 Trump tariffs, Iran war impact, and Section 122 global tariff.',
     type: 'website',
     siteName: 'Tariff Calculator',
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="border-b border-gray-200 bg-white">
           <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
             <a href="/" className="text-xl font-bold" style={{ color: 'var(--accent)' }}>
-              ?èõÔ∏?TariffCalc
+              TariffCalc
             </a>
             <span className="text-xs text-gray-400">Updated March 2026</span>
           </div>
