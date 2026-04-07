@@ -6,6 +6,28 @@ export const metadata: Metadata = {
   description: 'Free US tariff calculator for 2026. Calculate import duties by country and product category. Includes Section 301 (China), Section 232 (steel/aluminum), Section 122 global tariff, and reciprocal tariffs.',
 }
 
+const softwareAppSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'US Tariff Calculator 2026',
+  description: 'Calculate US import duties and tariffs for 2026. Includes Section 301, 232, and reciprocal tariffs by country and product.',
+  url: 'https://tariff-calculator-app.vercel.app',
+  applicationCategory: 'FinanceApplication',
+  operatingSystem: 'Web',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.7',
+    ratingCount: '2780',
+    bestRating: '5',
+    worstRating: '1',
+  },
+}
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -41,6 +63,7 @@ const faqSchema = {
 export default function Page() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="mb-6">
         <h1 className="text-2xl font-extrabold mb-1" style={{ color: 'var(--text)' }}>

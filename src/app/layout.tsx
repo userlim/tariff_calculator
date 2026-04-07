@@ -3,13 +3,13 @@ import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'US Tariff Calculator 2026 - Free Import Duty & Tax Estimator',
-  description: 'Calculate US import tariffs and duties for 2026. Covers Trump tariffs, Section 301, Section 232, and reciprocal tariffs by country. Free, instant, no signup.',
+  title: 'US Tariff Calculator (Free, 2026) – Import Duty & Tax Calculator',
+  description: 'Calculate US import tariffs instantly. Free 2026 tariff calculator with Section 301, 232, and reciprocal duties. See how much tariffs cost you — calculate now.',
   keywords: ['tariff calculator', 'import duty calculator', 'Trump tariff calculator 2026', 'US customs duty', 'trade war calculator', 'tariff by country', 'import tax calculator'],
   metadataBase: new URL('https://tariff-calculator-app.vercel.app'),
   openGraph: {
-    title: 'US Tariff Calculator 2026 - Free Import Duty Estimator',
-    description: 'Calculate how much tariffs add to your imports. Updated for 2026 Trump tariffs, Iran war impact, and Section 122 global tariff.',
+    title: 'US Tariff Calculator (Free, 2026) – Import Duty & Tax Calculator',
+    description: 'Calculate US import tariffs instantly. Free 2026 tariff calculator with Section 301, 232, and reciprocal duties. See how much tariffs cost you — calculate now.',
     type: 'website',
     siteName: 'Tariff Calculator',
   },
@@ -45,6 +45,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <footer className="border-t border-gray-200 py-4 text-center text-xs text-gray-400">
+          
+            <div className="flex flex-wrap justify-center gap-4 mb-3">
+              <span className="text-xs text-gray-400 font-semibold">Related Free Tools:</span>
+                <a href="https://currency-exchange-calculator-wheat.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Currency Converter</a>
+                <a href="https://bitcoin-profit-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Crypto Profit Calculator</a>
+                <a href="https://gold-price-today-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Gold Price Calculator</a>
+                <a href="https://inflation-rate-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Inflation Calculator</a>
+                <a href="https://utilicalc.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">UtiliCalc</a>
+            </div>
           <div className="flex flex-wrap justify-center gap-4 mb-2">
             <a href="/privacy-policy" className="text-blue-600 hover:text-blue-800">
               Privacy Policy
