@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Calculator from './calculator'
 
 export const metadata: Metadata = {
-  title: 'US Tariff Calculator 2026 – How Much Do Trump Tariffs Cost You?',
-  description: 'Free US tariff calculator for 2026. Calculate import duties by country and product category. Includes Section 301 (China), Section 232 (steel/aluminum), Section 122 global tariff, and reciprocal tariffs.',
+  title: 'US Tariff Calculator (Free, 2026) – See How Import Taxes Affect Prices',
+  description: 'Calculate how US tariffs impact product prices. Latest 2026 rates for all countries. Free import duty calculator — see the real cost of tariffs instantly.',
 }
 
 const softwareAppSchema = {
