@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Tariff Calculator',
   },
+    twitter: {
+    card: 'summary_large_image',
+    title: 'Tariff Calculator — US Import Tax Calculator',
+    description: 'US Import Tax Calculator',
+  },
   robots: { index: true, follow: true },
   alternates: { canonical: '/' },
 }

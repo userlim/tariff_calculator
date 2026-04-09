@@ -1,13 +1,22 @@
-import type { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://tariff-calculator-app.vercel.app'
   return [
     {
-      url: base,
+      url: 'https://tariff-calculator-app.vercel.app',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
-    },
+    },    {
+      url: 'https://tariff-calculator-app.vercel.app/privacy-policy',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },    {
+      url: 'https://tariff-calculator-app.vercel.app/terms',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    }
   ]
 }

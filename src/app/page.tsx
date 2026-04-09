@@ -100,6 +100,32 @@ export default function Page() {
           <p className="px-4 pb-3">Estimates range from $600 to over $1,000 per household per year in higher consumer prices, depending on purchasing patterns.</p>
         </details>
       </section>
+
+      {/* Extended Content Section for SEO depth */}
+      <section id="content-depth-section" className="mt-12 max-w-3xl mx-auto px-4">
+        <h2 className="text-2xl font-bold mb-6">Complete Guide</h2>
+        
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">What Are Tariffs and How Do They Work?</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Tariffs are taxes imposed by governments on imported goods. When a tariff is applied, the importing company pays the tax to the government, and this cost is typically passed on to consumers through higher prices. Tariffs serve multiple purposes: protecting domestic industries from foreign competition, generating government revenue, and serving as leverage in trade negotiations.` }} />
+            </div>
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Current US Tariff Structure (2026)</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `The US tariff landscape has undergone significant changes. Key tariff rates include Section 301 tariffs on Chinese goods (ranging from 25% to over 100% on specific categories like EVs and semiconductors), Section 232 tariffs on steel (25%) and aluminum (10%) from most countries, and various reciprocal tariffs implemented since 2025. The Harmonized Tariff Schedule (HTS) classifies goods into over 10,000 categories, each with specific duty rates.` }} />
+            </div>
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">How Tariffs Affect Consumer Prices</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Research from the National Bureau of Economic Research (NBER) found that tariffs are almost entirely passed through to consumer prices. The Federal Reserve Bank of New York estimated that tariffs cost the average US household approximately $831 per year in higher prices. Products most affected include electronics, clothing, furniture, and automobiles. Our calculator helps you see the exact tariff impact on any product.` }} />
+            </div>
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Trade Agreements and Tariff Exemptions</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Several trade agreements reduce or eliminate tariffs between participating countries. The USMCA (United States-Mexico-Canada Agreement) provides duty-free treatment for qualifying North American goods. The US also maintains bilateral trade agreements with countries like Australia, South Korea, and Colombia. Products manufactured in certain developing countries may qualify for preferential rates under the Generalized System of Preferences (GSP).` }} />
+            </div>
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">The Economic Debate Around Tariffs</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Economists are divided on tariff effectiveness. Proponents argue tariffs protect domestic jobs, reduce trade deficits, and address unfair trade practices like intellectual property theft and forced technology transfer. Critics contend tariffs raise consumer prices, invite retaliatory tariffs that harm US exporters, disrupt global supply chains, and rarely achieve their stated goals. The Peterson Institute for International Economics estimates that trade wars reduce global GDP by 0.5-1.0% over time.` }} />
+            </div>
+      </section>
     </>
   )
 }

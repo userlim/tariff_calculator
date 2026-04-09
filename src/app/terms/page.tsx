@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Terms of Service - Tariff Calculator',
   description: 'Terms of Service for Tariff Calculator.',
+  robots: { index: false, follow: true },
 }
 
 export default function TermsOfService() {

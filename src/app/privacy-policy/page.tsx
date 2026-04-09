@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Privacy Policy - Tariff Calculator',
   description: 'Privacy Policy for Tariff Calculator. Learn how we collect, use, and protect your information.',
+  robots: { index: false, follow: true },
 }
 
 export default function PrivacyPolicy() {
