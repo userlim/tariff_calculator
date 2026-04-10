@@ -12,7 +12,7 @@ export default async function Image() {
       <div
         style={{
           fontSize: 40,
-          background: 'linear-gradient(135deg, #DC2626 0%, #DC2626dd 50%, #DC2626bb 100%)',
+          background: 'linear-gradient(135deg, #0a0a0f 0%, #0EA5E930 50%, #0a0a0f 100%)',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -25,7 +25,7 @@ export default async function Image() {
         }}
       >
         <div style={{ fontSize: 80, marginBottom: 16 }}>🏛️</div>
-        <div style={{ fontSize: 56, fontWeight: 'bold', textAlign: 'center', marginBottom: 12, textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
+        <div style={{ fontSize: 56, fontWeight: 'bold', textAlign: 'center', marginBottom: 12, textShadow: '0 0 40px #0EA5E960' }}>
           Tariff Calculator
         </div>
         <div style={{ fontSize: 28, opacity: 0.9, textAlign: 'center', maxWidth: '80%' }}>
