@@ -134,9 +134,9 @@ export default function Calculator() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Product Value */}
           <div>
-            <label className="block text-sm font-semibold text-[var(--text-muted)] mb-1">Product Value (USD)</label>
+            <label className="block text-sm font-semibold text-[#8B95A1] mb-1">Product Value (USD)</label>
             <div className="relative">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-muted)]">$</span>
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8B95A1]">$</span>
               <input
                 type="number"
                 value={productValue}
@@ -150,9 +150,9 @@ export default function Calculator() {
 
           {/* Shipping */}
           <div>
-            <label className="block text-sm font-semibold text-[var(--text-muted)] mb-1">Shipping Cost (USD)</label>
+            <label className="block text-sm font-semibold text-[#8B95A1] mb-1">Shipping Cost (USD)</label>
             <div className="relative">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-muted)]">$</span>
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8B95A1]">$</span>
               <input
                 type="number"
                 value={shippingCost}
@@ -166,7 +166,7 @@ export default function Calculator() {
 
           {/* Country */}
           <div>
-            <label className="block text-sm font-semibold text-[var(--text-muted)] mb-1">Country of Origin</label>
+            <label className="block text-sm font-semibold text-[#8B95A1] mb-1">Country of Origin</label>
             <select
               value={selectedCountry}
               onChange={e => setSelectedCountry(Number(e.target.value))}
@@ -180,7 +180,7 @@ export default function Calculator() {
 
           {/* Product Category */}
           <div>
-            <label className="block text-sm font-semibold text-[var(--text-muted)] mb-1">Product Category</label>
+            <label className="block text-sm font-semibold text-[#8B95A1] mb-1">Product Category</label>
             <select
               value={selectedProduct}
               onChange={e => setSelectedProduct(Number(e.target.value))}
@@ -196,7 +196,7 @@ export default function Calculator() {
 
           {/* Quantity */}
           <div>
-            <label className="block text-sm font-semibold text-[var(--text-muted)] mb-1">Quantity</label>
+            <label className="block text-sm font-semibold text-[#8B95A1] mb-1">Quantity</label>
             <input
               type="number"
               value={quantity}
@@ -216,28 +216,28 @@ export default function Calculator() {
           {/* Summary */}
           <div className="bg-white/[0.02] rounded-xl p-4 space-y-2">
             <div className="flex justify-between text-sm">
-              <span className="text-[var(--text-muted)]">Product + Shipping ({quantity}x)</span>
+              <span className="text-[#8B95A1]">Product + Shipping ({quantity}x)</span>
               <span className="font-semibold">${result.totalBase.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
 
             <div className="flex justify-between text-sm">
-              <span className="text-[var(--text-muted)]">Country Tariff ({countries[selectedCountry].flag} {result.countryName})</span>
+              <span className="text-[#8B95A1]">Country Tariff ({countries[selectedCountry].flag} {result.countryName})</span>
               <span className="font-semibold text-orange-600">{result.countryRate}%</span>
             </div>
-            <div className="text-xs text-[var(--text-muted)] -mt-1">{result.countryNotes}</div>
+            <div className="text-xs text-[#8B95A1] -mt-1">{result.countryNotes}</div>
 
             {result.sectorRate > 0 && (
               <>
                 <div className="flex justify-between text-sm">
-                  <span className="text-[var(--text-muted)]">Sector Tariff ({result.productName})</span>
+                  <span className="text-[#8B95A1]">Sector Tariff ({result.productName})</span>
                   <span className="font-semibold text-orange-600">+{result.sectorRate}%</span>
                 </div>
-                <div className="text-xs text-[var(--text-muted)] -mt-1">{result.productNotes}</div>
+                <div className="text-xs text-[#8B95A1] -mt-1">{result.productNotes}</div>
               </>
             )}
 
-            <div className="border-t border-white/10 pt-2 flex justify-between text-sm">
-              <span className="text-[var(--text-muted)] font-bold">Effective Tariff Rate</span>
+            <div className="border-t border-[#E5E8EB] pt-2 flex justify-between text-sm">
+              <span className="text-[#8B95A1] font-bold">Effective Tariff Rate</span>
               <span className="font-extrabold text-red-600 text-lg">{result.effectiveRate}%</span>
             </div>
           </div>
@@ -265,23 +265,23 @@ export default function Calculator() {
           </div>
 
           {parseInt(quantity) > 1 && (
-            <div className="text-center text-sm text-[var(--text-secondary)]">
+            <div className="text-center text-sm text-[#4E5968]">
               Per unit with tariff: <span className="font-bold">${result.perUnitWithTariff.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
           )}
 
           {/* Visual bar */}
           <div>
-            <div className="text-xs text-[var(--text-secondary)] mb-1">Cost breakdown</div>
+            <div className="text-xs text-[#4E5968] mb-1">Cost breakdown</div>
             <div className="flex h-6 rounded-full overflow-hidden">
               <div
-                className="bg-blue-400 flex items-center justify-center text-white text-xs font-bold"
+                className="bg-blue-400 flex items-center justify-center text-[#191F28] text-xs font-bold"
                 style={{ width: `${(result.totalBase / result.totalWithTariff) * 100}%` }}
               >
                 Product
               </div>
               <div
-                className="bg-red-400 flex items-center justify-center text-white text-xs font-bold"
+                className="bg-red-400 flex items-center justify-center text-[#191F28] text-xs font-bold"
                 style={{ width: `${(result.tariffAmount / result.totalWithTariff) * 100}%` }}
               >
                 Tariff
@@ -297,20 +297,20 @@ export default function Calculator() {
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-white/10">
-                <th className="text-left py-2 pr-4 font-semibold text-[var(--text-muted)]">Country</th>
-                <th className="text-right py-2 pr-4 font-semibold text-[var(--text-muted)]">Rate</th>
-                <th className="text-left py-2 font-semibold text-[var(--text-muted)]">Authority</th>
+              <tr className="border-b border-[#E5E8EB]">
+                <th className="text-left py-2 pr-4 font-semibold text-[#8B95A1]">Country</th>
+                <th className="text-right py-2 pr-4 font-semibold text-[#8B95A1]">Rate</th>
+                <th className="text-left py-2 font-semibold text-[#8B95A1]">Authority</th>
               </tr>
             </thead>
             <tbody>
               {countries.map((c, i) => (
-                <tr key={i} className="border-b border-white/5 hover:bg-white/[0.02]">
+                <tr key={i} className="border-b border-[#E5E8EB] hover:bg-white/[0.02]">
                   <td className="py-2 pr-4">{c.flag} {c.name}</td>
                   <td className="py-2 pr-4 text-right font-bold" style={{ color: c.baseTariff >= 25 ? '#dc2626' : c.baseTariff > 0 ? '#ea580c' : '#16a34a' }}>
                     {c.baseTariff}%
                   </td>
-                  <td className="py-2 text-[var(--text-secondary)] text-xs">{c.notes}</td>
+                  <td className="py-2 text-[#4E5968] text-xs">{c.notes}</td>
                 </tr>
               ))}
             </tbody>
@@ -327,7 +327,7 @@ export default function Calculator() {
               <span className="text-2xl">{p.icon}</span>
               <div>
                 <div className="text-sm font-bold">{p.name}</div>
-                <div className="text-xs text-[var(--text-secondary)]">{p.notes}</div>
+                <div className="text-xs text-[#4E5968]">{p.notes}</div>
               </div>
               <span className="ml-auto text-lg font-extrabold text-red-600">{p.additionalTariff}%</span>
             </div>

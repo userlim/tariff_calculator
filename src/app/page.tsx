@@ -73,12 +73,12 @@ export default function Page() {
         <h1 className="text-2xl font-extrabold mb-1" style={{ color: 'var(--text)' }}>
           US Tariff Calculator 2026
         </h1>
-        <p className="text-[var(--text-secondary)] text-sm">
+        <p className="text-[#4E5968] text-sm">
           Calculate how much US import tariffs add to your product costs. Updated for March 2026.
         </p>
       </div>
       <Calculator />
-      <section className="mt-12 space-y-4 text-sm text-[var(--text-muted)] max-w-3xl">
+      <section className="mt-12 space-y-4 text-sm text-[#8B95A1] max-w-3xl">
         <h2 className="text-lg font-bold text-gray-200">About US Tariffs in 2026</h2>
         <p>
           Following the Supreme Court decision on February 20, 2026 that struck down IEEPA-based tariffs,
@@ -91,49 +91,49 @@ export default function Page() {
           increased costs for US consumers and businesses. The average effective US tariff rate has risen
           from approximately 2.5% to 13.7%, the highest level in decades.
         </p>
-        <details className="border border-[rgba(255,255,255,0.06)] rounded-lg">
-          <summary className="px-4 py-3 cursor-pointer font-semibold text-[var(--text-muted)]">How are tariff rates calculated?</summary>
+        <details className="border border-[#F2F4F6] rounded-lg">
+          <summary className="px-4 py-3 cursor-pointer font-semibold text-[#8B95A1]">How are tariff rates calculated?</summary>
           <p className="px-4 pb-3">Tariff rates depend on the country of origin and product category. Base rates come from Section 122 (10% global), with additional tariffs for specific countries (Section 301 for China) and products (Section 232 for steel/aluminum).</p>
         </details>
-        <details className="border border-[rgba(255,255,255,0.06)] rounded-lg">
-          <summary className="px-4 py-3 cursor-pointer font-semibold text-[var(--text-muted)]">Do USMCA goods avoid tariffs?</summary>
+        <details className="border border-[#F2F4F6] rounded-lg">
+          <summary className="px-4 py-3 cursor-pointer font-semibold text-[#8B95A1]">Do USMCA goods avoid tariffs?</summary>
           <p className="px-4 pb-3">Yes, goods compliant with the US-Mexico-Canada Agreement are largely exempt. About 85% of imports from Canada and Mexico qualify for USMCA exemptions.</p>
         </details>
-        <details className="border border-[rgba(255,255,255,0.06)] rounded-lg">
-          <summary className="px-4 py-3 cursor-pointer font-semibold text-[var(--text-muted)]">How much do tariffs cost households?</summary>
+        <details className="border border-[#F2F4F6] rounded-lg">
+          <summary className="px-4 py-3 cursor-pointer font-semibold text-[#8B95A1]">How much do tariffs cost households?</summary>
           <p className="px-4 pb-3">Estimates range from $600 to over $1,000 per household per year in higher consumer prices, depending on purchasing patterns.</p>
         </details>
       </section>
 
       {/* Extended Content Section for SEO depth */}
       <section id="content-depth-section" className="mt-20 max-w-3xl mx-auto px-6 relative z-[1]">
-        <h2 className="text-h2 mb-6 text-[var(--text-primary)]">Complete Guide</h2>
+        <h2 className="text-h2 mb-6 text-[#191F28]">Complete Guide</h2>
         
             <div className="mb-6">
-              <h3 className="text-h3 mb-2 text-[var(--text-primary)]">What Are Tariffs and How Do They Work?</h3>
-              <p className="text-[var(--text-secondary)] leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Tariffs are taxes imposed by governments on imported goods. When a tariff is applied, the importing company pays the tax to the government, and this cost is typically passed on to consumers through higher prices. Tariffs serve multiple purposes: protecting domestic industries from foreign competition, generating government revenue, and serving as leverage in trade negotiations.` }} />
+              <h3 className="text-h3 mb-2 text-[#191F28]">What Are Tariffs and How Do They Work?</h3>
+              <p className="text-[#4E5968] leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Tariffs are taxes imposed by governments on imported goods. When a tariff is applied, the importing company pays the tax to the government, and this cost is typically passed on to consumers through higher prices. Tariffs serve multiple purposes: protecting domestic industries from foreign competition, generating government revenue, and serving as leverage in trade negotiations.` }} />
             </div>
             <div className="mb-6">
-              <h3 className="text-h3 mb-2 text-[var(--text-primary)]">Current US Tariff Structure (2026)</h3>
-              <p className="text-[var(--text-secondary)] leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `The US tariff landscape has undergone significant changes. Key tariff rates include Section 301 tariffs on Chinese goods (ranging from 25% to over 100% on specific categories like EVs and semiconductors), Section 232 tariffs on steel (25%) and aluminum (10%) from most countries, and various reciprocal tariffs implemented since 2025. The Harmonized Tariff Schedule (HTS) classifies goods into over 10,000 categories, each with specific duty rates.` }} />
+              <h3 className="text-h3 mb-2 text-[#191F28]">Current US Tariff Structure (2026)</h3>
+              <p className="text-[#4E5968] leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `The US tariff landscape has undergone significant changes. Key tariff rates include Section 301 tariffs on Chinese goods (ranging from 25% to over 100% on specific categories like EVs and semiconductors), Section 232 tariffs on steel (25%) and aluminum (10%) from most countries, and various reciprocal tariffs implemented since 2025. The Harmonized Tariff Schedule (HTS) classifies goods into over 10,000 categories, each with specific duty rates.` }} />
             </div>
             <div className="mb-6">
-              <h3 className="text-h3 mb-2 text-[var(--text-primary)]">How Tariffs Affect Consumer Prices</h3>
-              <p className="text-[var(--text-secondary)] leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Research from the National Bureau of Economic Research (NBER) found that tariffs are almost entirely passed through to consumer prices. The Federal Reserve Bank of New York estimated that tariffs cost the average US household approximately $831 per year in higher prices. Products most affected include electronics, clothing, furniture, and automobiles. Our calculator helps you see the exact tariff impact on any product.` }} />
+              <h3 className="text-h3 mb-2 text-[#191F28]">How Tariffs Affect Consumer Prices</h3>
+              <p className="text-[#4E5968] leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Research from the National Bureau of Economic Research (NBER) found that tariffs are almost entirely passed through to consumer prices. The Federal Reserve Bank of New York estimated that tariffs cost the average US household approximately $831 per year in higher prices. Products most affected include electronics, clothing, furniture, and automobiles. Our calculator helps you see the exact tariff impact on any product.` }} />
             </div>
             <div className="mb-6">
-              <h3 className="text-h3 mb-2 text-[var(--text-primary)]">Trade Agreements and Tariff Exemptions</h3>
-              <p className="text-[var(--text-secondary)] leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Several trade agreements reduce or eliminate tariffs between participating countries. The USMCA (United States-Mexico-Canada Agreement) provides duty-free treatment for qualifying North American goods. The US also maintains bilateral trade agreements with countries like Australia, South Korea, and Colombia. Products manufactured in certain developing countries may qualify for preferential rates under the Generalized System of Preferences (GSP).` }} />
+              <h3 className="text-h3 mb-2 text-[#191F28]">Trade Agreements and Tariff Exemptions</h3>
+              <p className="text-[#4E5968] leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Several trade agreements reduce or eliminate tariffs between participating countries. The USMCA (United States-Mexico-Canada Agreement) provides duty-free treatment for qualifying North American goods. The US also maintains bilateral trade agreements with countries like Australia, South Korea, and Colombia. Products manufactured in certain developing countries may qualify for preferential rates under the Generalized System of Preferences (GSP).` }} />
             </div>
             <div className="mb-6">
-              <h3 className="text-h3 mb-2 text-[var(--text-primary)]">The Economic Debate Around Tariffs</h3>
-              <p className="text-[var(--text-secondary)] leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Economists are divided on tariff effectiveness. Proponents argue tariffs protect domestic jobs, reduce trade deficits, and address unfair trade practices like intellectual property theft and forced technology transfer. Critics contend tariffs raise consumer prices, invite retaliatory tariffs that harm US exporters, disrupt global supply chains, and rarely achieve their stated goals. The Peterson Institute for International Economics estimates that trade wars reduce global GDP by 0.5-1.0% over time.` }} />
+              <h3 className="text-h3 mb-2 text-[#191F28]">The Economic Debate Around Tariffs</h3>
+              <p className="text-[#4E5968] leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Economists are divided on tariff effectiveness. Proponents argue tariffs protect domestic jobs, reduce trade deficits, and address unfair trade practices like intellectual property theft and forced technology transfer. Critics contend tariffs raise consumer prices, invite retaliatory tariffs that harm US exporters, disrupt global supply chains, and rarely achieve their stated goals. The Peterson Institute for International Economics estimates that trade wars reduce global GDP by 0.5-1.0% over time.` }} />
             </div>
       </section>
     
       {/* Keyword-Optimized Content */}
       <section id="keyword-seo-section" className="mt-12 max-w-3xl mx-auto px-6 pb-16 relative z-[1]">
-        <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+        <p className="text-sm text-[#8B95A1] leading-relaxed">
           Calculate US import tariffs and customs duties. Our tariff calculator is updated for 2026 with the latest rates by country including China, Mexico, and EU. Use our import duty calculator, customs duty calculator, and landed cost calculator for accurate tariff cost estimates.
         </p>
 <div className="mt-3 flex flex-wrap gap-2">
