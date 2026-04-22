@@ -134,15 +134,15 @@ export default function Calculator() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Product Value */}
           <div>
-            <label className="block text-sm font-semibold text-[#8B95A1] mb-1">Product Value (USD)</label>
+            <label className="block text-sm font-semibold text-gray-600 mb-1">Product Value (USD)</label>
             <div className="relative">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8B95A1]">$</span>
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">$</span>
               <input
                 type="number"
                 value={productValue}
                 onChange={e => setProductValue(e.target.value)}
                 placeholder="1,000"
-                className="input pl-8"
+                className="tool-input pl-8"
                 min="0"
               />
             </div>
@@ -150,15 +150,15 @@ export default function Calculator() {
 
           {/* Shipping */}
           <div>
-            <label className="block text-sm font-semibold text-[#8B95A1] mb-1">Shipping Cost (USD)</label>
+            <label className="block text-sm font-semibold text-gray-600 mb-1">Shipping Cost (USD)</label>
             <div className="relative">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8B95A1]">$</span>
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">$</span>
               <input
                 type="number"
                 value={shippingCost}
                 onChange={e => setShippingCost(e.target.value)}
                 placeholder="50"
-                className="input pl-8"
+                className="tool-input pl-8"
                 min="0"
               />
             </div>
@@ -166,11 +166,11 @@ export default function Calculator() {
 
           {/* Country */}
           <div>
-            <label className="block text-sm font-semibold text-[#8B95A1] mb-1">Country of Origin</label>
+            <label className="block text-sm font-semibold text-gray-600 mb-1">Country of Origin</label>
             <select
               value={selectedCountry}
               onChange={e => setSelectedCountry(Number(e.target.value))}
-              className="input"
+              className="tool-input"
             >
               {countries.map((c, i) => (
                 <option key={i} value={i}>{c.flag} {c.name} ({c.baseTariff}%)</option>
@@ -180,11 +180,11 @@ export default function Calculator() {
 
           {/* Product Category */}
           <div>
-            <label className="block text-sm font-semibold text-[#8B95A1] mb-1">Product Category</label>
+            <label className="block text-sm font-semibold text-gray-600 mb-1">Product Category</label>
             <select
               value={selectedProduct}
               onChange={e => setSelectedProduct(Number(e.target.value))}
-              className="input"
+              className="tool-input"
             >
               {productCategories.map((p, i) => (
                 <option key={i} value={i}>
@@ -196,12 +196,12 @@ export default function Calculator() {
 
           {/* Quantity */}
           <div>
-            <label className="block text-sm font-semibold text-[#8B95A1] mb-1">Quantity</label>
+            <label className="block text-sm font-semibold text-gray-600 mb-1">Quantity</label>
             <input
               type="number"
               value={quantity}
               onChange={e => setQuantity(e.target.value)}
-              className="input"
+              className="tool-input"
               min="1"
             />
           </div>
@@ -211,40 +211,40 @@ export default function Calculator() {
       {/* Results */}
       {parseFloat(productValue) > 0 && (
         <div className="card space-y-4">
-          <h2 className="text-lg font-bold text-gray-200">Tariff Breakdown</h2>
+          <h2 className="text-lg font-bold text-gray-800">Tariff Breakdown</h2>
 
           {/* Summary */}
-          <div className="bg-white/[0.02] rounded-xl p-4 space-y-2">
+          <div className="bg-gray-50 rounded-xl p-4 space-y-2">
             <div className="flex justify-between text-sm">
-              <span className="text-[#8B95A1]">Product + Shipping ({quantity}x)</span>
+              <span className="text-gray-600">Product + Shipping ({quantity}x)</span>
               <span className="font-semibold">${result.totalBase.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
 
             <div className="flex justify-between text-sm">
-              <span className="text-[#8B95A1]">Country Tariff ({countries[selectedCountry].flag} {result.countryName})</span>
+              <span className="text-gray-600">Country Tariff ({countries[selectedCountry].flag} {result.countryName})</span>
               <span className="font-semibold text-orange-600">{result.countryRate}%</span>
             </div>
-            <div className="text-xs text-[#8B95A1] -mt-1">{result.countryNotes}</div>
+            <div className="text-xs text-gray-400 -mt-1">{result.countryNotes}</div>
 
             {result.sectorRate > 0 && (
               <>
                 <div className="flex justify-between text-sm">
-                  <span className="text-[#8B95A1]">Sector Tariff ({result.productName})</span>
+                  <span className="text-gray-600">Sector Tariff ({result.productName})</span>
                   <span className="font-semibold text-orange-600">+{result.sectorRate}%</span>
                 </div>
-                <div className="text-xs text-[#8B95A1] -mt-1">{result.productNotes}</div>
+                <div className="text-xs text-gray-400 -mt-1">{result.productNotes}</div>
               </>
             )}
 
-            <div className="border-t border-[#E5E8EB] pt-2 flex justify-between text-sm">
-              <span className="text-[#8B95A1] font-bold">Effective Tariff Rate</span>
+            <div className="border-t border-gray-200 pt-2 flex justify-between text-sm">
+              <span className="text-gray-600 font-bold">Effective Tariff Rate</span>
               <span className="font-extrabold text-red-600 text-lg">{result.effectiveRate}%</span>
             </div>
           </div>
 
           {/* Big numbers */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <div className="bg-red-500/10 rounded-xl p-4 text-center">
+            <div className="bg-red-50 rounded-xl p-4 text-center">
               <div className="text-xs text-red-400 font-semibold uppercase">Tariff Cost</div>
               <div className="text-2xl font-extrabold text-red-600">
                 ${result.tariffAmount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
@@ -256,7 +256,7 @@ export default function Calculator() {
                 ${result.totalWithTariff.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </div>
             </div>
-            <div className="bg-orange-500/10 rounded-xl p-4 text-center">
+            <div className="bg-orange-50 rounded-xl p-4 text-center">
               <div className="text-xs text-orange-400 font-semibold uppercase">Price Increase</div>
               <div className="text-2xl font-extrabold text-orange-600">
                 +{result.priceIncrease.toFixed(1)}%
@@ -265,23 +265,23 @@ export default function Calculator() {
           </div>
 
           {parseInt(quantity) > 1 && (
-            <div className="text-center text-sm text-[#4E5968]">
+            <div className="text-center text-sm text-gray-500">
               Per unit with tariff: <span className="font-bold">${result.perUnitWithTariff.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
           )}
 
           {/* Visual bar */}
           <div>
-            <div className="text-xs text-[#4E5968] mb-1">Cost breakdown</div>
+            <div className="text-xs text-gray-500 mb-1">Cost breakdown</div>
             <div className="flex h-6 rounded-full overflow-hidden">
               <div
-                className="bg-blue-400 flex items-center justify-center text-[#191F28] text-xs font-bold"
+                className="bg-blue-400 flex items-center justify-center text-white text-xs font-bold"
                 style={{ width: `${(result.totalBase / result.totalWithTariff) * 100}%` }}
               >
                 Product
               </div>
               <div
-                className="bg-red-400 flex items-center justify-center text-[#191F28] text-xs font-bold"
+                className="bg-red-400 flex items-center justify-center text-white text-xs font-bold"
                 style={{ width: `${(result.tariffAmount / result.totalWithTariff) * 100}%` }}
               >
                 Tariff
@@ -293,24 +293,24 @@ export default function Calculator() {
 
       {/* Quick Reference Table */}
       <div className="card">
-        <h2 className="text-lg font-bold text-gray-200 mb-3">2026 Tariff Rates by Country</h2>
+        <h2 className="text-lg font-bold text-gray-800 mb-3">2026 Tariff Rates by Country</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-[#E5E8EB]">
-                <th className="text-left py-2 pr-4 font-semibold text-[#8B95A1]">Country</th>
-                <th className="text-right py-2 pr-4 font-semibold text-[#8B95A1]">Rate</th>
-                <th className="text-left py-2 font-semibold text-[#8B95A1]">Authority</th>
+              <tr className="border-b border-gray-200">
+                <th className="text-left py-2 pr-4 font-semibold text-gray-600">Country</th>
+                <th className="text-right py-2 pr-4 font-semibold text-gray-600">Rate</th>
+                <th className="text-left py-2 font-semibold text-gray-600">Authority</th>
               </tr>
             </thead>
             <tbody>
               {countries.map((c, i) => (
-                <tr key={i} className="border-b border-[#E5E8EB] hover:bg-white/[0.02]">
+                <tr key={i} className="border-b border-gray-100 hover:bg-gray-50">
                   <td className="py-2 pr-4">{c.flag} {c.name}</td>
                   <td className="py-2 pr-4 text-right font-bold" style={{ color: c.baseTariff >= 25 ? '#dc2626' : c.baseTariff > 0 ? '#ea580c' : '#16a34a' }}>
                     {c.baseTariff}%
                   </td>
-                  <td className="py-2 text-[#4E5968] text-xs">{c.notes}</td>
+                  <td className="py-2 text-gray-500 text-xs">{c.notes}</td>
                 </tr>
               ))}
             </tbody>
@@ -320,14 +320,14 @@ export default function Calculator() {
 
       {/* Sector Tariffs */}
       <div className="card">
-        <h2 className="text-lg font-bold text-gray-200 mb-3">Additional Sector Tariffs</h2>
+        <h2 className="text-lg font-bold text-gray-800 mb-3">Additional Sector Tariffs</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {productCategories.filter(p => p.additionalTariff > 0).map((p, i) => (
-            <div key={i} className="flex items-center gap-3 p-3 bg-white/[0.02] rounded-lg">
+            <div key={i} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
               <span className="text-2xl">{p.icon}</span>
               <div>
                 <div className="text-sm font-bold">{p.name}</div>
-                <div className="text-xs text-[#4E5968]">{p.notes}</div>
+                <div className="text-xs text-gray-500">{p.notes}</div>
               </div>
               <span className="ml-auto text-lg font-extrabold text-red-600">{p.additionalTariff}%</span>
             </div>

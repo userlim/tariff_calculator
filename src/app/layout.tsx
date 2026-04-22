@@ -1,41 +1,26 @@
 import type { Metadata } from 'next'
-import './globals.css'
 import Script from 'next/script'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'US Tariff Calculator (Free, 2026) – Import Duty & Tax Calculator',
   description: 'Calculate US import tariffs instantly. Free 2026 tariff calculator with Section 301, 232, and reciprocal duties. See how much tariffs cost you — calculate now.',
-  keywords: 'tariff calculator, us tariff calculator 2026, import duty calculator, customs duty calculator, trump tariff calculator, tariff rates by country, china tariff rate 2026, import tax calculator us, tariff impact calculator, reciprocal tariff calculator, us customs calculator, tariff cost estimator, how much are tariffs, tariff lookup tool, landed cost calculator',
+  keywords: ['tariff calculator', 'import duty calculator', 'Trump tariff calculator 2026', 'US customs duty', 'trade war calculator', 'tariff by country', 'import tax calculator'],
   metadataBase: new URL('https://tariff-calculator-app.vercel.app'),
   openGraph: {
     title: 'US Tariff Calculator (Free, 2026) – Import Duty & Tax Calculator',
     description: 'Calculate US import tariffs instantly. Free 2026 tariff calculator with Section 301, 232, and reciprocal duties. See how much tariffs cost you — calculate now.',
-    url: 'https://tariff-calculator-app.vercel.app',
-    siteName: 'Tariff Calculator',
-    locale: 'en_US',
     type: 'website',
+    siteName: 'Tariff Calculator',
   },
-  twitter: {
+    twitter: {
     card: 'summary_large_image',
-    title: 'Tariff Calculator',
-    description: 'Calculate US import tariffs instantly. Free 2026 tariff calculator with Section 301, 232, and reciprocal duties. See how much tariffs cost you — calculate now.',
+    title: 'Tariff Calculator — US Import Tax Calculator',
+    description: 'US Import Tax Calculator',
   },
-  robots: {
-    index: true,
-    follow: true,
-    'max-image-preview': 'large' as const,
-    'max-snippet': -1,
-    'max-video-preview': -1,
-  },
-  icons: { icon: '/favicon.svg' },
-  alternates: {
-    canonical: 'https://tariff-calculator-app.vercel.app',
-    languages: {
-      'en': 'https://tariff-calculator-app.vercel.app',
-      'x-default': 'https://tariff-calculator-app.vercel.app',
-    },
-  },
-};
+  robots: { index: true, follow: true },
+  alternates: { canonical: '/' },
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -51,45 +36,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script id="gtag-init" strategy="afterInteractive">
           {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P04TH8XJJ9');`}
         </Script>
-              {/* BreadcrumbList Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tariff-calculator-app.vercel.app"}, {"@type": "ListItem", "position": 2, "name": "Tariff Calculator", "item": "https://tariff-calculator-app.vercel.app"}]})
-        }} />
-        {/* Organization & WebSite Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({"@context": "https://schema.org", "@type": "WebSite", "name": "Tariff Calculator", "url": "https://tariff-calculator-app.vercel.app", "publisher": {"@type": "Organization", "name": "UtiliCalc Tools", "url": "https://utilicalc.vercel.app", "logo": {"@type": "ImageObject", "url": "https://tariff-calculator-app.vercel.app/favicon.svg"}}, "potentialAction": {"@type": "SearchAction", "target": "https://tariff-calculator-app.vercel.app/?q={search_term_string}", "query-input": "required name=search_term_string"}})
-        }} />
-        {/* Preconnect & DNS-Prefetch Hints */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
-        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
-        {/* Speakable Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({"@context": "https://schema.org", "@type": "WebPage", "speakable": {"@type": "SpeakableSpecification", "cssSelector": ["h1", ".keyword-seo-section p"]}})
-        }} />
-</head>
+      </head>
       <body className="min-h-screen flex flex-col">
-        <header className="border-b border-[#F2F4F6] bg-white">
+        <header className="border-b border-gray-200 bg-white">
           <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
             <a href="/" className="text-xl font-bold" style={{ color: 'var(--accent)' }}>
               TariffCalc
             </a>
-            <span className="text-xs text-[#8B95A1]">Updated March 2026</span>
+            <span className="text-xs text-gray-400">Updated March 2026</span>
           </div>
         </header>
         <main className="flex-1 max-w-5xl mx-auto px-4 py-8 w-full">
           {children}
         </main>
-        <footer className="border-t border-[#F2F4F6] py-4 text-center text-xs text-[#8B95A1]">
+        <footer className="border-t border-gray-200 py-4 text-center text-xs text-gray-400">
           
             <div className="flex flex-wrap justify-center gap-4 mb-3">
-              <span className="text-xs text-[#4E5968] font-semibold uppercase tracking-wider">Related Free Tools:</span>
-                <a href="https://currency-exchange-calculator-wheat.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">Currency Exchange Converter</a>
-                <a href="https://bitcoin-profit-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">Crypto Profit Calculator</a>
-                <a href="https://gold-price-today-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">Gold Price Calculator</a>
-                <a href="https://inflation-rate-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">Inflation Rate Calculator</a>
-                <a href="https://utilicalc.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">UtiliCalc All-in-One Tools</a>
+              <span className="text-xs text-gray-400 font-semibold">Related Free Tools:</span>
+                <a href="https://currency-exchange-calculator-wheat.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Currency Exchange Converter</a>
+                <a href="https://bitcoin-profit-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Crypto Profit Calculator</a>
+                <a href="https://gold-price-today-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Gold Price Calculator</a>
+                <a href="https://inflation-rate-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Inflation Rate Calculator</a>
+                <a href="https://utilicalc.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">UtiliCalc All-in-One Tools</a>
             </div>
           <div className="flex flex-wrap justify-center gap-4 mb-2">
             <a href="/privacy-policy" className="text-blue-600 hover:text-blue-800">
